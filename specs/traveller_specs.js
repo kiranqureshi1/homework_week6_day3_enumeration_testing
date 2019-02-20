@@ -21,9 +21,10 @@ describe("traveller", function(){
     traveller1 = new Traveller(journies);
   });
 
-  // it('should have a collection of journies ', function(){
-  //   assert.deepStrictEqual(traveller1.listofJournies(), journies);
-  // });
+  it('should have a collection of journies ', function(){
+    const actual = traveller1.listofJournies; //wierd
+    assert.deepStrictEqual(actual, journies);
+  });
 
   it(" should be able to get the journies start location", function(){
     assert.deepStrictEqual(traveller1.journies_start_location(), ["Edinburgh","Boston","London","Dundee"]);
